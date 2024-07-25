@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# React-Redux Counter Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates how to use Redux with React to manage global state. It leverages the `react-redux` library to integrate Redux into a React application, utilizing the `useDispatch` and `useSelector` hooks.
 
-## Available Scripts
+## Core Concepts
 
-In the project directory, you can run:
+### Redux
 
-### `npm start`
+**Redux** is a state management library for JavaScript applications. It provides a predictable way to manage and update application state. Key concepts include:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Store:** A single, centralized place to store the entire state of the application. It allows you to access and modify the state in a consistent way.
+- **Actions:** Plain objects that represent events or intentions to change the state. Actions typically include a `type` field and can carry additional data.
+- **Reducers:** Functions that specify how the state changes in response to actions. Reducers take the current state and an action as arguments and return a new state.
+- **Dispatch:** A method used to send actions to the Redux store to trigger state changes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### React-Redux
 
-### `npm test`
+**React-Redux** is a library that provides bindings to integrate Redux with React. It simplifies the process of connecting React components to the Redux store. Key concepts include:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Provider:** A component that makes the Redux store available to any nested components that need access to it. It wraps the root of the application.
+- **useSelector:** A React-Redux hook that allows you to read data from the Redux store. It lets you select a piece of state from the store and subscribe to updates.
+- **useDispatch:** A React-Redux hook that provides a reference to the `dispatch` function from the Redux store. It allows you to send actions to the store to update the state.
 
-### `npm run build`
+## Setup and Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/diegodazpeitia/useselectorusedispatchreduxdemo.git
+   cd useselectorusedispatchreduxdemo
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install Dependencies**
 
-### `npm run eject`
+   Ensure Node.js and npm or yarn are installed, then install the project dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Run the Application**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   Start the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-## Learn More
+   Navigate to `http://localhost:3000` in your browser to view the application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This application demonstrates a simple counter that uses Redux to manage its state. The counter value is displayed and can be incremented using a button. The `useSelector` hook is used to access the counter value from the Redux store, and the `useDispatch` hook is used to dispatch actions that update the counter.
 
-### Code Splitting
+## Key Benefits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Predictable State Management:** Redux provides a clear and predictable way to manage application state, making it easier to understand and debug.
+- **Component Decoupling:** React-Redux hooks allow components to access state and dispatch actions without tightly coupling them to the Redux store.
+- **Centralized State:** With Redux, the application state is centralized in one store, which helps in maintaining consistency and managing state changes in a single place.
 
-### Analyzing the Bundle Size
+# What you will experience 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img width="510" alt="Captura de pantalla 2024-07-25 a la(s) 13 47 54" src="https://github.com/user-attachments/assets/52949a42-5d98-4a5f-8ac0-00537f4937f0">
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions to improve or extend this project are welcome. Please submit issues or pull requests as needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
